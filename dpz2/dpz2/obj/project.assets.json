@@ -690,13 +690,13 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.1907.2",
+    "version": "1.1.1908.3",
     "restore": {
-      "projectUniqueName": "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dpz2\\dpz2\\dpz2.csproj",
+      "projectUniqueName": "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dotnet-core-dpz2\\dpz2\\dpz2\\dpz2.csproj",
       "projectName": "dotnet-core-dpz2",
-      "projectPath": "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dpz2\\dpz2\\dpz2.csproj",
+      "projectPath": "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dotnet-core-dpz2\\dpz2\\dpz2\\dpz2.csproj",
       "packagesPath": "C:\\Users\\inmou\\.nuget\\packages\\",
-      "outputPath": "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dpz2\\dpz2\\obj\\",
+      "outputPath": "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dotnet-core-dpz2\\dpz2\\dpz2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

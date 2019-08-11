@@ -14,11 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("d.p.z software studio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("一套基于.Net Core的辅助开发套件")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.1907.2")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1907.2")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.1.1908.3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.1908.3")]
 [assembly: System.Reflection.AssemblyProductAttribute("dpz2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dpz2")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.1907.2")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.1.1908.3")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
 

@@ -18,9 +18,19 @@ namespace dpz2 {
         }
 
         /// <summary>
-        /// 是否内容为空
+        /// 是否内容为空，同IsNoneOrNull
+        /// 兼容接口，为避免混淆，请使用IsNoneOrNull进行为空判断
         /// </summary>
         public static bool IsNone(this string sz) {
+            if (sz == null) return true;
+            if (sz == "") return true;
+            return false;
+        }
+
+        /// <summary>
+        /// 是否内容为空
+        /// </summary>
+        public static bool IsNoneOrNull(this string sz) {
             if (sz == null) return true;
             if (sz == "") return true;
             return false;

@@ -6,3 +6,12 @@ X:\Projects\dpzsoft\dotnet-core-dpz2\dpz2\dpz2\obj\Debug\netcoreapp2.2\dpz2.Asse
 X:\Projects\dpzsoft\dotnet-core-dpz2\dpz2\dpz2\obj\Debug\netcoreapp2.2\dpz2.AssemblyInfo.cs
 X:\Projects\dpzsoft\dotnet-core-dpz2\dpz2\dpz2\obj\Debug\netcoreapp2.2\dpz2.dll
 X:\Projects\dpzsoft\dotnet-core-dpz2\dpz2\dpz2\obj\Debug\netcoreapp2.2\dpz2.pdb
+X:\Projects\dpzsoft\dotnet-core-dpz2\dotnet-core-dpz2\dpz2\dpz2\bin\Debug\netcoreapp2.2\dpz2.deps.json
+X:\Projects\dpzsoft\dotnet-core-dpz2\dotnet-core-dpz2\dpz2\dpz2\bin\Debug\netcoreapp2.2\dpz2.dll
+X:\Projects\dpzsoft\dotnet-core-dpz2\dotnet-core-dpz2\dpz2\dpz2\bin\Debug\netcoreapp2.2\dpz2.pdb
+X:\Projects\dpzsoft\dotnet-core-dpz2\dotnet-core-dpz2\dpz2\dpz2\obj\Debug\netcoreapp2.2\dpz2.csprojAssemblyReference.cache
+X:\Projects\dpzsoft\dotnet-core-dpz2\dotnet-core-dpz2\dpz2\dpz2\obj\Debug\netcoreapp2.2\dpz2.csproj.CoreCompileInputs.cache
+X:\Projects\dpzsoft\dotnet-core-dpz2\dotnet-core-dpz2\dpz2\dpz2\obj\Debug\netcoreapp2.2\dpz2.AssemblyInfoInputs.cache
+X:\Projects\dpzsoft\dotnet-core-dpz2\dotnet-core-dpz2\dpz2\dpz2\obj\Debug\netcoreapp2.2\dpz2.AssemblyInfo.cs
+X:\Projects\dpzsoft\dotnet-core-dpz2\dotnet-core-dpz2\dpz2\dpz2\obj\Debug\netcoreapp2.2\dpz2.dll
+X:\Projects\dpzsoft\dotnet-core-dpz2\dotnet-core-dpz2\dpz2\dpz2\obj\Debug\netcoreapp2.2\dpz2.pdb

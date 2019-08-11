@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.2": {
-      "dpz2/1.0.1907.2": {
+      "dpz2/1.1.1908.3": {
         "runtime": {
           "dpz2.dll": {}
         }
@@ -14,7 +14,7 @@
     }
   },
   "libraries": {
-    "dpz2/1.0.1907.2": {
+    "dpz2/1.1.1908.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

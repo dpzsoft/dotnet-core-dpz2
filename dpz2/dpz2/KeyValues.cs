@@ -108,8 +108,13 @@ namespace dpz2 {
             return dict.GetEnumerator();
         }
 
-        bool IDictionary<string, T>.Remove(string key) {
-            throw new NotImplementedException();
+        /// <summary>
+        /// 移除一个元素
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        public bool Remove(string key) {
+            return dict.Remove(key);
         }
 
         bool ICollection<KeyValuePair<string, T>>.Remove(KeyValuePair<string, T> item) {

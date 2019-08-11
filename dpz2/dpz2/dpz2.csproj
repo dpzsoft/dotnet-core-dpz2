@@ -4,7 +4,7 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>dotnet-core-dpz2</PackageId>
-    <Version>1.0.1907.2</Version>
+    <Version>1.1.1908.3</Version>
     <Authors>d.p.z software studio</Authors>
     <Description>一套基于.Net Core的辅助开发套件</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dpz2\\dpz2\\dpz2.csproj": {}
+    "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dotnet-core-dpz2\\dpz2\\dpz2\\dpz2.csproj": {}
   },
   "projects": {
-    "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dpz2\\dpz2\\dpz2.csproj": {
-      "version": "1.0.1907.2",
+    "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dotnet-core-dpz2\\dpz2\\dpz2\\dpz2.csproj": {
+      "version": "1.1.1908.3",
       "restore": {
-        "projectUniqueName": "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dpz2\\dpz2\\dpz2.csproj",
+        "projectUniqueName": "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dotnet-core-dpz2\\dpz2\\dpz2\\dpz2.csproj",
         "projectName": "dotnet-core-dpz2",
-        "projectPath": "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dpz2\\dpz2\\dpz2.csproj",
+        "projectPath": "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dotnet-core-dpz2\\dpz2\\dpz2\\dpz2.csproj",
         "packagesPath": "C:\\Users\\inmou\\.nuget\\packages\\",
-        "outputPath": "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dpz2\\dpz2\\obj\\",
+        "outputPath": "X:\\Projects\\dpzsoft\\dotnet-core-dpz2\\dotnet-core-dpz2\\dpz2\\dpz2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
