@@ -6,17 +6,17 @@ using System.Text;
 namespace dpz2 {
 
     /// <summary>
-    /// 键/值存储字典
+    /// 大小写不敏感的键值存储
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class KeyValues<T> : dpz2.Object, IDictionary<string, T> {
+    public class InsensitiveKeyValues<T> : dpz2.Object, IDictionary<string, T> {
 
         private Dictionary<string, T> dict;
 
         /// <summary>
         /// 对象实例化
         /// </summary>
-        public KeyValues() {
+        public InsensitiveKeyValues() {
             dict = new Dictionary<string, T>();
         }
 
@@ -33,6 +33,7 @@ namespace dpz2 {
         /// <returns></returns>
         public T this[string key] {
             get {
+                key = key.ToLower();
                 if (dict.ContainsKey(key)) {
                     return dict[key];
                 } else {
@@ -40,6 +41,7 @@ namespace dpz2 {
                 }
             }
             set {
+                key = key.ToLower();
                 if (dict.ContainsKey(key)) {
                     dict[key] = value;
                 } else {
@@ -88,6 +90,7 @@ namespace dpz2 {
         /// <returns></returns>
         public bool ContainsKey(string key) {
             //throw new NotImplementedException();
+            key = key.ToLower();
             return dict.ContainsKey(key);
         }
 
@@ -119,6 +122,7 @@ namespace dpz2 {
         /// <param name="key"></param>
         /// <returns></returns>
         public bool Remove(string key) {
+            key = key.ToLower();
             return dict.Remove(key);
         }
 
@@ -133,6 +137,7 @@ namespace dpz2 {
         /// <param name="value"></param>
         /// <returns></returns>
         public bool TryGetValue(string key, out T value) {
+            key = key.ToLower();
             return dict.TryGetValue(key, out value);
         }
 

@@ -1,10 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>dotnet-core-dpz2</PackageId>
-    <Version>1.1.1908.4</Version>
+    <Version>1.1.1908.5</Version>
     <Authors>d.p.z software studio</Authors>
     <Description>一个基于.Net Core的辅助开发套件基础件，包含格式化调试输出、基础操作类型、字符串辅助和时间处理</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
