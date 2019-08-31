@@ -189,5 +189,40 @@ namespace dpz2 {
             return new Time(dt);
         }
 
+        /// <summary>
+        /// 获取年份
+        /// </summary>
+        public int Year { get { return val.Year; } }
+
+        /// <summary>
+        /// 获取月份
+        /// </summary>
+        public int Month { get { return val.Month; } }
+
+        /// <summary>
+        /// 获取日期
+        /// </summary>
+        public int Day { get { return val.Day; } }
+
+        /// <summary>
+        /// 获取时
+        /// </summary>
+        public int Hour { get { return val.Hour; } }
+
+        /// <summary>
+        /// 获取分
+        /// </summary>
+        public int Minute { get { return val.Minute; } }
+
+        /// <summary>
+        /// 获取秒
+        /// </summary>
+        public int Second { get { return val.Second; } }
+
+        /// <summary>
+        /// 获取毫秒
+        /// </summary>
+        public int Millisecond { get { return val.Millisecond; } }
+
     }
 }
