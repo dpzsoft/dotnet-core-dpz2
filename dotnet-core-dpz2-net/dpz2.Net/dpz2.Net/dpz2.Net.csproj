@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Version>1.0.1907.2</Version>
+    <Description>基于dpz2开发套件的网络操作扩展组件(.Net Core)</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Authors>d.p.z software studio</Authors>
+    <RepositoryUrl>https://github.com/inmount/dotnet-core-dpz2-net</RepositoryUrl>
+    <PackageIconUrl>https://dev.lywos.com/Img/dpz/logo.jpg</PackageIconUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>dotnet-core-dpz2-net</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dotnet-core-dpz2" Version="1.0.1907.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

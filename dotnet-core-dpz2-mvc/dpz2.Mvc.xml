@@ -1,0 +1,398 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dpz2.Mvc</name>
+    </assembly>
+    <members>
+        <member name="T:dpz2.Mvc.Kestrel">
+            <summary>
+            Kestrel操作器
+            </summary>
+        </member>
+        <member name="M:dpz2.Mvc.Kestrel.DeployConfig(System.String,Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions)">
+            <summary>
+            应用配置
+            </summary>
+            <param name="path"></param>
+            <param name="options"></param>
+        </member>
+        <member name="T:dpz2.Mvc.XOrmForVue.AddForm">
+            <summary>
+            添加表单
+            </summary>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.AddForm.#ctor(dpz2.db.Database,dpz2.db.OrmTables,dpz2.db.Row,dpz2.Mvc.XOrmForVue.Config,System.String,System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="db"></param>
+            <param name="form"></param>
+            <param name="tables"></param>
+            <param name="config"></param>
+            <param name="plmName"></param>
+            <param name="tabName"></param>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.AddForm.GetHtml(System.String)">
+            <summary>
+            获取修改数据表单HTML代码
+            </summary>
+            <param name="formId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.AddForm.GetHtml(System.String,System.String)">
+            <summary>
+            获取修改数据表单HTML代码
+            </summary>
+            <param name="tagName"></param>
+            <param name="formId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.Mvc.XOrmForVue.Basic">
+            <summary>
+            XOrm框架组件基类
+            </summary>
+        </member>
+        <member name="P:dpz2.Mvc.XOrmForVue.Basic.Database">
+            <summary>
+            数据库定义
+            </summary>
+        </member>
+        <member name="P:dpz2.Mvc.XOrmForVue.Basic.Form">
+            <summary>
+            初始化数据表单内容
+            </summary>
+        </member>
+        <member name="P:dpz2.Mvc.XOrmForVue.Basic.Tables">
+            <summary>
+            相关ORM表格集合
+            </summary>
+        </member>
+        <member name="P:dpz2.Mvc.XOrmForVue.Basic.Config">
+            <summary>
+            配置信息
+            </summary>
+        </member>
+        <member name="P:dpz2.Mvc.XOrmForVue.Basic.XmlPath">
+            <summary>
+            配置路径
+            </summary>
+        </member>
+        <member name="P:dpz2.Mvc.XOrmForVue.Basic.Platform">
+            <summary>
+            平台名称
+            </summary>
+        </member>
+        <member name="P:dpz2.Mvc.XOrmForVue.Basic.Table">
+            <summary>
+            表名称
+            </summary>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.Basic.#ctor(dpz2.db.Database,dpz2.db.OrmTables,dpz2.db.Row,dpz2.Mvc.XOrmForVue.Config,System.String,System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="db"></param>
+            <param name="form"></param>
+            <param name="tables"></param>
+            <param name="config"></param>
+            <param name="plmName"></param>
+            <param name="tabName"></param>
+        </member>
+        <member name="T:dpz2.Mvc.XOrmForVue.Config">
+            <summary>
+            配置文件
+            </summary>
+        </member>
+        <member name="P:dpz2.Mvc.XOrmForVue.Config.Url">
+            <summary>
+            XML定义地址
+            </summary>
+        </member>
+        <member name="P:dpz2.Mvc.XOrmForVue.Config.CachePath">
+            <summary>
+            XML缓存目录
+            </summary>
+        </member>
+        <member name="P:dpz2.Mvc.XOrmForVue.Config.Path">
+            <summary>
+            XML配置目录
+            </summary>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.Config.#ctor(System.String,System.String,System.String)">
+            <summary>
+            实例化一个配置文件
+            </summary>
+            <param name="url"></param>
+            <param name="path"></param>
+            <param name="cachePath"></param>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.Config.LoadFormConf(System.String)">
+            <summary>
+            从配置文件加载
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.Mvc.XOrmForVue.DataOpreator">
+            <summary>
+            操作器
+            </summary>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.DataOpreator.CheckNumberRule(dpz2.Xml.XmlNode,System.String,System.Double)">
+            <summary>
+            检查数值规则
+            </summary>
+            <param name="node"></param>
+            <param name="title"></param>
+            <param name="val"></param>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.DataOpreator.CheckOnly(dpz2.Xml.XmlNode,System.String,System.String,System.String,System.Double)">
+            <summary>
+            检查数值唯一性规则
+            </summary>
+            <param name="node"></param>
+            <param name="tabName"></param>
+            <param name="name"></param>
+            <param name="title"></param>
+            <param name="val"></param>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.DataOpreator.CheckOnly(dpz2.Xml.XmlNode,System.String,System.String,System.String,System.String)">
+            <summary>
+            检查字符串唯一性规则
+            </summary>
+            <param name="node"></param>
+            <param name="tabName"></param>
+            <param name="name"></param>
+            <param name="title"></param>
+            <param name="val"></param>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.DataOpreator.CheckForm(dpz2.Xml.XmlNode,System.String,dpz2.db.Row)">
+            <summary>
+            检查数值规则
+            </summary>
+            <param name="table"></param>
+            <param name="tabName"></param>
+            <param name="row"></param>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.DataOpreator.FillWithSign(System.String,dpz2.db.Row)">
+            <summary>
+            填充行数据
+            </summary>
+            <param name="cnt"></param>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.DataOpreator.GetFillContent(System.String,System.String,dpz2.Xml.XmlNode,dpz2.db.Row)">
+            <summary>
+            获取填充内容
+            </summary>
+            <param name="plmName"></param>
+            <param name="tabName"></param>
+            <param name="fills"></param>
+            <param name="rowFill"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.DataOpreator.#ctor(dpz2.db.Database,dpz2.db.OrmTables,dpz2.db.Row,dpz2.Mvc.XOrmForVue.Config,System.String,System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="db"></param>
+            <param name="form"></param>
+            <param name="tables"></param>
+            <param name="config"></param>
+            <param name="plmName"></param>
+            <param name="tabName"></param>
+        </member>
+        <member name="T:dpz2.Mvc.XOrmForVue.EditForm">
+            <summary>
+            添加表单
+            </summary>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.EditForm.#ctor(dpz2.db.Database,dpz2.db.OrmTables,dpz2.db.Row,dpz2.Mvc.XOrmForVue.Config,System.String,System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="db"></param>
+            <param name="form"></param>
+            <param name="tables"></param>
+            <param name="config"></param>
+            <param name="plmName"></param>
+            <param name="tabName"></param>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.EditForm.GetHtml(System.String)">
+            <summary>
+            获取修改数据表单HTML代码
+            </summary>
+            <param name="formId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.EditForm.GetHtml(System.String,System.String)">
+            <summary>
+            获取修改数据表单HTML代码
+            </summary>
+            <param name="tagName"></param>
+            <param name="formId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.Mvc.XOrmForVue.Form">
+            <summary>
+            表单
+            </summary>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.Form.#ctor(dpz2.db.Database,dpz2.db.OrmTables,dpz2.db.Row,dpz2.Mvc.XOrmForVue.Config,System.String,System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="db"></param>
+            <param name="form"></param>
+            <param name="tables"></param>
+            <param name="config"></param>
+            <param name="plmName"></param>
+            <param name="tabName"></param>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.Form.GetHtml(System.String,System.String,System.String)">
+            <summary>
+            获取数据表单HTML代码
+            </summary>
+            <param name="tagName"></param>
+            <param name="formType"></param>
+            <param name="formId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.Mvc.XOrmForVue.HtmlBuilder">
+            <summary>
+            HTML生成器
+            </summary>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.HtmlBuilder.#ctor(dpz2.db.Database,dpz2.db.OrmTables,dpz2.db.Row,dpz2.Mvc.XOrmForVue.Config,System.String,System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="db"></param>
+            <param name="form"></param>
+            <param name="tables"></param>
+            <param name="config"></param>
+            <param name="plmName"></param>
+            <param name="tabName"></param>
+        </member>
+        <member name="T:dpz2.Mvc.XOrmForVue.Inserter">
+            <summary>
+            插入管理器
+            </summary>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.Inserter.#ctor(dpz2.db.Database,dpz2.db.OrmTables,dpz2.db.Row,dpz2.Mvc.XOrmForVue.Config,System.String,System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="db"></param>
+            <param name="form"></param>
+            <param name="tables"></param>
+            <param name="config"></param>
+            <param name="plmName"></param>
+            <param name="tabName"></param>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.Inserter.Save(dpz2.db.Row)">
+            <summary>
+            添加数据保存
+            </summary>
+            <param name="row"></param>
+        </member>
+        <member name="T:dpz2.Mvc.XOrmForVue.Table">
+            <summary>
+            表格
+            </summary>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.Table.#ctor(dpz2.db.Database,dpz2.db.OrmTables,dpz2.db.Row,dpz2.Mvc.XOrmForVue.Config,System.String,System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="db"></param>
+            <param name="form"></param>
+            <param name="tables"></param>
+            <param name="config"></param>
+            <param name="plmName"></param>
+            <param name="tabName"></param>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.Table.GetHtml(System.String)">
+            <summary>
+            获取列表表格HTML代码
+            </summary>
+            <param name="tagName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.Table.GetHtml">
+            <summary>
+            获取列表表格HTML代码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.Mvc.XOrmForVue.Updater">
+            <summary>
+            更新管理器
+            </summary>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.Updater.#ctor(dpz2.db.Database,dpz2.db.OrmTables,dpz2.db.Row,dpz2.Mvc.XOrmForVue.Config,System.String,System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="db"></param>
+            <param name="form"></param>
+            <param name="tables"></param>
+            <param name="config"></param>
+            <param name="plmName"></param>
+            <param name="tabName"></param>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.Updater.Save(dpz2.db.Row)">
+            <summary>
+            修改数据保存
+            </summary>
+            <param name="row"></param>
+        </member>
+        <member name="T:dpz2.Mvc.XOrmForVue.View">
+            <summary>
+            视图
+            </summary>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.View.#ctor(dpz2.db.Database,dpz2.db.OrmTables,dpz2.db.Row,dpz2.Mvc.XOrmForVue.Config,System.String,System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="db"></param>
+            <param name="form"></param>
+            <param name="tables"></param>
+            <param name="config"></param>
+            <param name="plmName"></param>
+            <param name="tabName"></param>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.View.GetHtml(System.String,System.String,System.String,dpz2.db.Row)">
+            <summary>
+            获取数据查看HTML代码
+            </summary>
+            <param name="tagName"></param>
+            <param name="plmName"></param>
+            <param name="tabName"></param>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.View.GetHtml(System.String,System.String,dpz2.db.Row)">
+            <summary>
+            获取数据查看HTML代码
+            </summary>
+            <param name="plmName"></param>
+            <param name="tabName"></param>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.Mvc.XOrmForVue.XmlAttrs">
+            <summary>
+            XML属性集合
+            </summary>
+        </member>
+        <member name="M:dpz2.Mvc.XOrmForVue.XmlAttrs.OnParseString">
+            <summary>
+            获取字符串表示形式
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

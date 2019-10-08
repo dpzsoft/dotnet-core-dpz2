@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Version>1.1.1909.14</Version>
+    <Description>基于dpz2开发套件的MVC相关扩展组件(.Net Core)，支持Kestrel服务自动配置及XORM框架支持</Description>
+    <Authors>d.p.z software studio</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIconUrl>https://dev.lywos.com/Img/dpz/logo.jpg</PackageIconUrl>
+    <RepositoryUrl>https://github.com/dpzsoft/dotnet-core-dpz2-mvc</RepositoryUrl>
+    <PackageId>dotnet-core-dpz2-mvc</PackageId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>X:\Projects\dpzsoft\dotnet-core-dpz2\dotnet-core-dpz2-mvc\dpz2.Mvc.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="demo\**" />
+    <EmbeddedResource Remove="demo\**" />
+    <None Remove="demo\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dotnet-core-dpz2-conf" Version="1.0.1907.1" />
+    <PackageReference Include="dotnet-core-dpz2-db" Version="1.1.1908.15" />
+    <PackageReference Include="dotnet-core-dpz2-file" Version="1.0.1907.1" />
+    <PackageReference Include="dotnet-core-dpz2-net" Version="1.0.1907.2" />
+    <PackageReference Include="dotnet-core-dpz2-xml" Version="1.2.1909.6" />
+    <PackageReference Include="dotnet-core-dpz2-xorm" Version="1.0.1908.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

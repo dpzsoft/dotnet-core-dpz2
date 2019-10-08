@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dpz2.Conf</name>
+    </assembly>
+    <members>
+        <member name="T:dpz2.Conf.File">
+            <summary>
+            Linux通用配置文件
+            </summary>
+        </member>
+        <member name="P:dpz2.Conf.File.Groups">
+            <summary>
+            获取全部
+            </summary>
+        </member>
+        <member name="M:dpz2.Conf.File.#ctor(System.String)">
+            <summary>
+            Loads a configuration file.
+            </summary>
+            <param name="file">The filename where the configuration file can be found.</param>
+        </member>
+        <member name="P:dpz2.Conf.File.Item(System.String)">
+            <summary>
+            获取一个设置组
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Conf.File.Save(System.String)">
+            <summary>
+            Saves the configuration to a file
+            </summary>
+            <param name="filename">The filename for the saved configuration file.</param>
+        </member>
+        <member name="M:dpz2.Conf.File.OnDispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:dpz2.Conf.Line">
+            <summary>
+            配置行
+            </summary>
+        </member>
+        <member name="M:dpz2.Conf.Line.OnParseString">
+            <summary>
+            获取标准字符串表示形式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Conf.Line.OnDispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:dpz2.Conf.Note">
+            <summary>
+            注释
+            </summary>
+        </member>
+        <member name="P:dpz2.Conf.Note.Content">
+            <summary>
+            获取或设置注释内容
+            </summary>
+        </member>
+        <member name="M:dpz2.Conf.Note.OnParseString">
+            <summary>
+            获取标准字符串表示形式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Conf.Note.OnDispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:dpz2.Conf.Setting">
+            <summary>
+            配置项
+            </summary>
+        </member>
+        <member name="P:dpz2.Conf.Setting.Key">
+            <summary>
+            获取或设置键
+            </summary>
+        </member>
+        <member name="P:dpz2.Conf.Setting.Value">
+            <summary>
+            获取或设置值
+            </summary>
+        </member>
+        <member name="M:dpz2.Conf.Setting.OnParseString">
+            <summary>
+            获取标准字符串表示形式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Conf.Setting.OnDispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:dpz2.Conf.SettingGroup">
+            <summary>
+            设置组
+            </summary>
+        </member>
+        <member name="P:dpz2.Conf.SettingGroup.Name">
+            <summary>
+            获取或设置名称
+            </summary>
+        </member>
+        <member name="M:dpz2.Conf.SettingGroup.#ctor">
+            <summary>
+            对象实例化
+            </summary>
+        </member>
+        <member name="M:dpz2.Conf.SettingGroup.AddEmptyLine">
+            <summary>
+            添加一条空行
+            </summary>
+        </member>
+        <member name="M:dpz2.Conf.SettingGroup.AddNote(System.String)">
+            <summary>
+            添加一条注释
+            </summary>
+            <param name="content"></param>
+        </member>
+        <member name="P:dpz2.Conf.SettingGroup.Item(System.String)">
+            <summary>
+            获取或设置值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Conf.SettingGroup.ContainsKey(System.String)">
+            <summary>
+            判断是否存在键值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Conf.SettingGroup.Set(System.String,System.String)">
+            <summary>
+            设置配置
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:dpz2.Conf.SettingGroup.Delete(System.String)">
+            <summary>
+            删除配置
+            </summary>
+            <param key="key">The name of the setting to delete.</param>
+        </member>
+        <member name="M:dpz2.Conf.SettingGroup.OnParseString">
+            <summary>
+            获取标准字符串表示形式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Conf.SettingGroup.OnDispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+    </members>
+</doc>

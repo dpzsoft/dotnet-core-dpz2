@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <PackageId>dotnet-core-dpz2-conf</PackageId>
+    <Version>1.0.1907.1</Version>
+    <Authors>d.p.z software studio</Authors>
+    <Description>dpz2开发套件配置文件操作扩展(.Net Core)</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIconUrl>https://dev.lywos.com/Img/dpz/logo.jpg</PackageIconUrl>
+    <RepositoryUrl>https://github.com/inmount/dotnet-core-dpz2-conf</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>X:\Projects\dpzsoft\dotnet-core-dpz2-conf\dpz2.Conf\dpz2.Conf\dpz2.Conf.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dotnet-core-dpz2" Version="1.0.1907.2" />
+    <PackageReference Include="dotnet-core-dpz2-file" Version="1.0.1907.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

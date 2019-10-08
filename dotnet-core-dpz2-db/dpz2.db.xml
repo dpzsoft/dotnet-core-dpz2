@@ -1,0 +1,2199 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dpz2.db</name>
+    </assembly>
+    <members>
+        <member name="T:dpz2.db.Connection">
+            <summary>
+            通用数据库连接管理器
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Connection.DatabaseType">
+            <summary>
+            获取数据库类型
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Connection.ConnectionString">
+            <summary>
+            获取连接字符串
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Connection.#ctor(dpz2.db.Database)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="database"></param>
+        </member>
+        <member name="M:dpz2.db.Connection.GetNewIndex">
+            <summary>
+            获取一个索引值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.GetRows(System.String)">
+            <summary>
+            获取数据列表
+            </summary>
+            <param name="sql">Generic Database Manipulation Language</param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.GetRow(System.String)">
+            <summary>
+            获取单行数据
+            </summary>
+            <param name="sql">Generic Database Manipulation Language</param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.Exec(System.String)">
+            <summary>
+            执行语句
+            </summary>
+            <param name="sql">Generic Database Manipulation Language</param>
+        </member>
+        <member name="M:dpz2.db.Connection.GetStandardSqlString(dpz2.db.ISqlStringable)">
+            <summary>
+            获取标准的SQL语句
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.Select(dpz2.db.ISqlTableStringable[])">
+            <summary>
+            生成一个查询语句
+            </summary>
+            <param name="sqlTables"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.Insert(dpz2.db.SqlUnits.Table,dpz2.db.Row)">
+            <summary>
+            生成一个插入语句
+            </summary>
+            <param name="table"></param>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.Insert(dpz2.db.SqlUnits.Table,dpz2.db.RowOperator)">
+            <summary>
+            生成一个插入语句
+            </summary>
+            <param name="table"></param>
+            <param name="rowOperator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.Update(dpz2.db.SqlUnits.Table,dpz2.db.Row,dpz2.db.SqlUnits.TableField)">
+            <summary>
+            生成一个更新语句
+            </summary>
+            <param name="table">表对象</param>
+            <param name="row">数据行对象</param>
+            <param name="keyField">更新键字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.Update(dpz2.db.SqlUnits.Table,dpz2.db.RowOperator,dpz2.db.SqlUnits.TableField)">
+            <summary>
+            生成一个更新语句
+            </summary>
+            <param name="table">表对象</param>
+            <param name="rowOperator">数据行对象</param>
+            <param name="keyField">更新键字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.Delete(dpz2.db.SqlUnits.Table)">
+            <summary>
+            生成一个删除语句
+            </summary>
+            <param name="table">表对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.CheckDatabase(System.String)">
+            <summary>
+            检测数据库是否存在
+            </summary>
+            <param name="dbName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.CreateDatabase(System.String,System.String)">
+            <summary>
+            创建数据库
+            </summary>
+            <param name="dbName"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.DropDatabase(System.String)">
+            <summary>
+            删除数据库
+            </summary>
+            <param name="dbName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.CheckTable(System.String)">
+            <summary>
+            检测数据表是否存在
+            </summary>
+            <param name="tabName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.CreateTable(System.String,dpz2.db.SqlUnits.FieldDefine[])">
+            <summary>
+            创建数据表
+            </summary>
+            <param name="tabName"></param>
+            <param name="fields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.RenameTable(System.String,System.String)">
+            <summary>
+            重命名数据库
+            </summary>
+            <param name="tabName"></param>
+            <param name="newName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.DropTable(System.String)">
+            <summary>
+            删除数据库
+            </summary>
+            <param name="tabName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.CheckTableFiled(System.String,System.String)">
+            <summary>
+            检测数据表是否存在
+            </summary>
+            <param name="tabName"></param>
+            <param name="fidName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.AddTableFiled(System.String,dpz2.db.SqlUnits.FieldDefine)">
+            <summary>
+            添加字段
+            </summary>
+            <param name="tabName"></param>
+            <param name="fid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.UpdateTableFiled(System.String,System.String,dpz2.db.SqlUnits.FieldDefine)">
+            <summary>
+            修改字段
+            </summary>
+            <param name="tabName"></param>
+            <param name="fidName"></param>
+            <param name="fid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.DropTableFiled(System.String,System.String)">
+            <summary>
+            删除字段
+            </summary>
+            <param name="tabName"></param>
+            <param name="fidName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.Count(dpz2.db.ISqlStringable)">
+            <summary>
+            创建一个Count函数对象
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.Rand">
+            <summary>
+            创建一个随机排序对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connection.OnDispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:dpz2.db.Connectiones.IConnectionable">
+            <summary>
+            数据库连接管理器接口
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Connectiones.IConnectionable.Open(System.String)">
+            <summary>
+            打开数据库连接
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Connectiones.IConnectionable.Close">
+            <summary>
+            关闭数据库连接
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Connectiones.IConnectionable.IsOpen">
+            <summary>
+            数据库打开状态
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Connectiones.IConnectionable.GetRows(System.String)">
+            <summary>
+            获取数据列表
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connectiones.IConnectionable.GetRow(System.String)">
+            <summary>
+            获取单行数据
+            </summary>
+            <param name="sql">Generic Database Manipulation Language</param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connectiones.IConnectionable.Exec(System.String)">
+            <summary>
+            执行语句
+            </summary>
+            <param name="sql">Generic Database Manipulation Language</param>
+        </member>
+        <member name="T:dpz2.db.Connectiones.MicrosoftSqlServer">
+            <summary>
+            Microsoft 公司推出的关系型数据库管理系统
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Connectiones.MicrosoftSqlServer.IsOpen">
+            <summary>
+            数据库是否开启
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Connectiones.MicrosoftSqlServer.Open(System.String)">
+            <summary>
+            打开数据库连接
+            </summary>
+            <param name="connectionString"></param>
+        </member>
+        <member name="M:dpz2.db.Connectiones.MicrosoftSqlServer.Close">
+            <summary>
+            关闭数据库
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Connectiones.MicrosoftSqlServer.Exec(System.String)">
+            <summary>
+            执行标准的SQL语句
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connectiones.MicrosoftSqlServer.GetRows(System.String)">
+            <summary>
+            执行标准的SQL语句并返回列表
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connectiones.MicrosoftSqlServer.GetRow(System.String)">
+            <summary>
+            执行标准的SQL语句并返回单行数据
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connectiones.MicrosoftSqlServer.OnDispose">
+            <summary>
+            释放对象
+            </summary>
+        </member>
+        <member name="T:dpz2.db.Connectiones.MySqlOrMariaDB">
+            <summary>
+            一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Connectiones.MySqlOrMariaDB.IsOpen">
+            <summary>
+            数据库是否开启
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Connectiones.MySqlOrMariaDB.Open(System.String)">
+            <summary>
+            打开数据库连接
+            </summary>
+            <param name="connectionString"></param>
+        </member>
+        <member name="M:dpz2.db.Connectiones.MySqlOrMariaDB.Close">
+            <summary>
+            关闭数据库
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Connectiones.MySqlOrMariaDB.Exec(System.String)">
+            <summary>
+            执行标准的SQL语句
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connectiones.MySqlOrMariaDB.GetRows(System.String)">
+            <summary>
+            执行标准的SQL语句并返回列表
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connectiones.MySqlOrMariaDB.GetRow(System.String)">
+            <summary>
+            执行标准的SQL语句并返回单行数据
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connectiones.MySqlOrMariaDB.OnDispose">
+            <summary>
+            释放对象
+            </summary>
+        </member>
+        <member name="T:dpz2.db.Connectiones.PostgreSql">
+            <summary>
+            一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Connectiones.PostgreSql.IsOpen">
+            <summary>
+            数据库是否开启
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Connectiones.PostgreSql.Open(System.String)">
+            <summary>
+            打开数据库连接
+            </summary>
+            <param name="connectionString"></param>
+        </member>
+        <member name="M:dpz2.db.Connectiones.PostgreSql.Close">
+            <summary>
+            关闭数据库
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Connectiones.PostgreSql.Exec(System.String)">
+            <summary>
+            执行标准的SQL语句
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connectiones.PostgreSql.GetRows(System.String)">
+            <summary>
+            执行标准的SQL语句并返回列表
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connectiones.PostgreSql.GetRow(System.String)">
+            <summary>
+            执行标准的SQL语句并返回单行数据
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connectiones.PostgreSql.OnDispose">
+            <summary>
+            释放对象
+            </summary>
+        </member>
+        <member name="T:dpz2.db.Connectiones.Sqlite">
+            <summary>
+            一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Connectiones.Sqlite.IsOpen">
+            <summary>
+            数据库是否开启
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Connectiones.Sqlite.Open(System.String)">
+            <summary>
+            打开数据库连接
+            </summary>
+            <param name="connectionString"></param>
+        </member>
+        <member name="M:dpz2.db.Connectiones.Sqlite.Close">
+            <summary>
+            关闭数据库
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Connectiones.Sqlite.Exec(System.String)">
+            <summary>
+            执行标准的SQL语句
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connectiones.Sqlite.GetRows(System.String)">
+            <summary>
+            执行标准的SQL语句并返回列表
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connectiones.Sqlite.GetRow(System.String)">
+            <summary>
+            执行标准的SQL语句并返回单行数据
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Connectiones.Sqlite.OnDispose">
+            <summary>
+            释放对象
+            </summary>
+        </member>
+        <member name="T:dpz2.db.DatabaseTypes">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="F:dpz2.db.DatabaseTypes.Oracle">
+            <summary>
+            Oracle Database，又名Oracle RDBMS，简称Oracle。
+            甲骨文公司的一款关系数据库管理系统,
+            </summary>
+        </member>
+        <member name="F:dpz2.db.DatabaseTypes.MySQL">
+            <summary>
+            一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品。
+            </summary>
+        </member>
+        <member name="F:dpz2.db.DatabaseTypes.Microsoft_SQL_Server">
+            <summary>
+            Microsoft 公司推出的关系型数据库管理系统。
+            </summary>
+        </member>
+        <member name="F:dpz2.db.DatabaseTypes.PostgreSQL">
+            <summary>
+            加州大学伯克利分校计算机系开发的 POSTGRES，现在已经更名为PostgreSQL
+            </summary>
+        </member>
+        <member name="F:dpz2.db.DatabaseTypes.DB2">
+            <summary>
+            IBM DB2
+            美国IBM公司开发的一套关系型数据库管理系统
+            </summary>
+        </member>
+        <member name="F:dpz2.db.DatabaseTypes.Microsoft_Office_Access">
+            <summary>
+            由微软发布的关系数据库管理系统
+            连接mdb专用
+            </summary>
+        </member>
+        <member name="F:dpz2.db.DatabaseTypes.Microsoft_Office_Access_v12">
+            <summary>
+            由微软发布的关系数据库管理系统
+            连接accdb专用
+            </summary>
+        </member>
+        <member name="F:dpz2.db.DatabaseTypes.SQLite">
+            <summary>
+            一款轻型的数据库，是遵守ACID的关系型数据库管理系统
+            </summary>
+        </member>
+        <member name="F:dpz2.db.DatabaseTypes.SQLite_3">
+            <summary>
+            一款轻型的数据库，是遵守ACID的关系型数据库管理系统
+            第三代专用
+            </summary>
+        </member>
+        <member name="T:dpz2.db.Database">
+            <summary>
+            数据库定义操作静态类
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Database.Type">
+            <summary>
+            获取数据库类型
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Database.LoadFromConf(System.String,System.String)">
+            <summary>
+            从配置文件中加载数据库定义
+            </summary>
+            <param name="path"></param>
+            <param name="group"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.Databases.MicrosoftSqlServer">
+            <summary>
+            Microsoft 公司推出的关系型数据库管理系统
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.MicrosoftSqlServer.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.MicrosoftSqlServer.User">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.MicrosoftSqlServer.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.MicrosoftSqlServer.Port">
+            <summary>
+            端口号
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.MicrosoftSqlServer.Name">
+            <summary>
+            数据库名称
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Databases.MicrosoftSqlServer.#ctor">
+            <summary>
+            对象实例化
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Databases.MicrosoftSqlServer.OnParseString">
+            <summary>
+            获取字符串表现形式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.Databases.MySql">
+            <summary>
+            一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.MySql.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.MySql.User">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.MySql.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.MySql.Port">
+            <summary>
+            端口号
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.MySql.Name">
+            <summary>
+            数据库名称
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Databases.MySql.#ctor">
+            <summary>
+            对象实例化
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Databases.MySql.OnParseString">
+            <summary>
+            获取字符串表现形式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.Databases.PostgreSql">
+            <summary>
+            一款轻型的数据库，是遵守ACID的关系型数据库管理系统
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.PostgreSql.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.PostgreSql.User">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.PostgreSql.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.PostgreSql.Port">
+            <summary>
+            端口号
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.PostgreSql.Name">
+            <summary>
+            数据库名称
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Databases.PostgreSql.#ctor">
+            <summary>
+            对象实例化
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Databases.PostgreSql.OnParseString">
+            <summary>
+            获取字符串表现形式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.Databases.Sqlite">
+            <summary>
+            一款轻型的数据库，是遵守ACID的关系型数据库管理系统
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Databases.Sqlite.Path">
+            <summary>
+            存储路径
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Databases.Sqlite.#ctor">
+            <summary>
+            对象实例化
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Databases.Sqlite.OnParseString">
+            <summary>
+            获取字符串表现形式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.ISqlAsable">
+            <summary>
+            可进行标准SQL字符串转化接口
+            </summary>
+        </member>
+        <member name="M:dpz2.db.ISqlAsable.As(System.String)">
+            <summary>
+            允许对象重命名
+            </summary>
+            <param name="name">名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.ISqlStringable">
+            <summary>
+            可进行标准SQL字符串转化接口
+            </summary>
+        </member>
+        <member name="P:dpz2.db.ISqlStringable.IsComplicated">
+            <summary>
+            获取或设置是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.ISqlStringable.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取标准SQL字符串
+            </summary>
+            <param name="tp">数据库定义对象</param>
+            <param name="isChild">是否为多子对象</param>
+            <param name="multiTable">是否为多对象模式</param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.ISqlTableStringable">
+            <summary>
+            可进行标准SQL字符串转化接口
+            </summary>
+        </member>
+        <member name="M:dpz2.db.ISqlTableStringable.ToSqlTableString(dpz2.db.DatabaseTypes)">
+            <summary>
+            获取标准字段SQL字符串
+            </summary>
+            <param name="tp">数据库定义对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.OrmFields">
+            <summary>
+            Orm框架的字段定义集合基类
+            </summary>
+        </member>
+        <member name="M:dpz2.db.OrmFields.OnGetField(System.String)">
+            <summary>
+            获取相关的字段定义
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:dpz2.db.OrmFields.Item(System.String)">
+            <summary>
+            获取相关的字段定义
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.OrmTable">
+            <summary>
+            Orm专用表定义
+            </summary>
+        </member>
+        <member name="M:dpz2.db.OrmTable.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:dpz2.db.OrmTable.OnRowerCreate(dpz2.db.Row)">
+            <summary>
+            创建一个行数据操作器
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.OrmTable.Rower(dpz2.db.Row)">
+            <summary>
+            创建一个行数据操作器
+            </summary>
+            <param name="row">行数据对象</param>
+        </member>
+        <member name="M:dpz2.db.OrmTable.OnGetField(System.String)">
+            <summary>
+            获取相关的字段定义
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:dpz2.db.OrmTable.Item(System.String)">
+            <summary>
+            获取相关的字段定义
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.OrmTables">
+            <summary>
+            Orm框架的表定义集合基类
+            </summary>
+        </member>
+        <member name="M:dpz2.db.OrmTables.OnGetTable(System.String)">
+            <summary>
+            获取相关的字段定义
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:dpz2.db.OrmTables.Item(System.String)">
+            <summary>
+            获取相关的字段定义
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.RowDynamicMetaObject.#ctor(System.Linq.Expressions.Expression,System.Object)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="expression"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:dpz2.db.RowDynamicMetaObject.BindSetMember(System.Dynamic.SetMemberBinder,System.Dynamic.DynamicMetaObject)">
+            <summary>
+            设置值
+            </summary>
+            <param name="binder"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.RowDynamicMetaObject.BindGetMember(System.Dynamic.GetMemberBinder)">
+            <summary>
+            获取值
+            </summary>
+            <param name="binder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.Row">
+            <summary>
+            数据行
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Row.Item(dpz2.db.SqlUnits.TableField)">
+            <summary>
+            获取或设置值
+            </summary>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Row.SetValue(System.String,System.Object)">
+            <summary>
+            设置属性
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Row.GetValue(System.String)">
+            <summary>
+            获取属性
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.Row.OnReturnDefaultValue">
+            <summary>
+            返回默认值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.RowOperator">
+            <summary>
+            行数据操作器
+            </summary>
+        </member>
+        <member name="P:dpz2.db.RowOperator.Row">
+            <summary>
+            获取行数据对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.RowOperator.#ctor(dpz2.db.Row)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="row"></param>
+        </member>
+        <member name="M:dpz2.db.RowOperator.GetRow">
+            <summary>
+            获取基础数据行对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.RowOperator.OnSetValue(System.String,System.String)">
+            <summary>
+            设置内容
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:dpz2.db.RowOperator.Set(System.String,System.String)">
+            <summary>
+            设置内容
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.RowOperator.OnDispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:dpz2.db.Rows">
+            <summary>
+            数据表格
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Rows.#ctor">
+            <summary>
+            对象实例化
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Rows.Item(System.Int32)">
+            <summary>
+            获取行数据
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:dpz2.db.Rows.Count">
+            <summary>
+            获取表格内数据行数量
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Rows.Add(dpz2.db.Row)">
+            <summary>
+            添加一行数据
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:dpz2.db.Rows.Clear">
+            <summary>
+            清除数据
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Rows.GetEnumerator">
+            <summary>
+            获取Enumerator
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Rows.Insert(System.Int32,dpz2.db.Row)">
+            <summary>
+            插入数据
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Rows.RemoveAt(System.Int32)">
+            <summary>
+            删除数据
+            </summary>
+        </member>
+        <member name="P:dpz2.db.Rows.IsEmpty">
+            <summary>
+            获取对象内元素是否为空
+            </summary>
+        </member>
+        <member name="M:dpz2.db.Rows.OnDispose">
+            <summary>
+            释放内部对象
+            </summary>
+        </member>
+        <member name="T:dpz2.db.SqlStatements.Delete">
+            <summary>
+            数据更新语句
+            </summary>
+        </member>
+        <member name="P:dpz2.db.SqlStatements.Delete.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Delete.#ctor(dpz2.db.Connection,dpz2.db.SqlUnits.Table)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="dbc">数据库连接</param>
+            <param name="table">表对象</param>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Delete.Where(dpz2.db.SqlUnits.Formula)">
+            <summary>
+            设置筛选条件
+            </summary>
+            <param name="formula"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Delete.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取标准SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Delete.ToSqlString">
+            <summary>
+            获取标准SQL字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Delete.Exec">
+            <summary>
+            执行删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.SqlStatements.Insert">
+            <summary>
+            数据插入语句
+            </summary>
+        </member>
+        <member name="P:dpz2.db.SqlStatements.Insert.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Insert.#ctor(dpz2.db.Connection,dpz2.db.SqlUnits.Table,dpz2.db.Row)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="dbc"></param>
+            <param name="table"></param>
+            <param name="row"></param>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Insert.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取标准SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Insert.ToSqlString">
+            <summary>
+            获取标准SQL字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Insert.Exec">
+            <summary>
+            执行插入
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.SqlStatements.Select">
+            <summary>
+            查询对象
+            </summary>
+        </member>
+        <member name="P:dpz2.db.SqlStatements.Select.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Select.#ctor(dpz2.db.Connection,dpz2.db.ISqlTableStringable[])">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="dbc"></param>
+            <param name="sqlTables"></param>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Select.ToSqlString">
+            <summary>
+            获取标准SQL字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Select.Columns(dpz2.db.ISqlStringable[])">
+            <summary>
+            设置返回字段
+            </summary>
+            <param name="sqlFields"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Select.Where(dpz2.db.SqlUnits.Formula)">
+            <summary>
+            设置筛选条件
+            </summary>
+            <param name="formula"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Select.Asc(dpz2.db.ISqlStringable)">
+            <summary>
+            设置升序条件
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Select.Desc(dpz2.db.ISqlStringable)">
+            <summary>
+            设置升序条件
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Select.Group(dpz2.db.ISqlStringable[])">
+            <summary>
+            设置返回字段
+            </summary>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Select.As(System.String)">
+            <summary>
+            重命名
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Select.Limit(dpz2.db.SqlUnits.TableField,System.Int32,System.Int32)">
+            <summary>
+            设置游标
+            </summary>
+            <param name="field"></param>
+            <param name="idx"></param>
+            <param name="len"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Select.GetRows">
+            <summary>
+            获取数据列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Select.GetRow">
+            <summary>
+            获取单行数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Select.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取标准SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.SqlStatements.Update">
+            <summary>
+            数据更新语句
+            </summary>
+        </member>
+        <member name="P:dpz2.db.SqlStatements.Update.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Update.#ctor(dpz2.db.Connection,dpz2.db.SqlUnits.Table,dpz2.db.Row,dpz2.db.SqlUnits.TableField)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="dbc">数据库连接</param>
+            <param name="table">表对象</param>
+            <param name="row">数据行对象</param>
+            <param name="keyField">更新键字段</param>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Update.Where(dpz2.db.SqlUnits.Formula)">
+            <summary>
+            设置筛选条件
+            </summary>
+            <param name="formula"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Update.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取标准SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Update.ToSqlString">
+            <summary>
+            获取标准SQL字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlStatements.Update.Exec">
+            <summary>
+            执行更新
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.SqlUnits.As">
+            <summary>
+            重命名
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.As.#ctor(dpz2.db.ISqlStringable,System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="obj"></param>
+            <param name="name"></param>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.As.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.As.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取标准字段SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.As.ToSqlTableString(dpz2.db.DatabaseTypes)">
+            <summary>
+            获取标准表SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.SqlUnits.FieldDefine">
+            <summary>
+            字段定义
+            </summary>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.FieldDefine.Name">
+            <summary>
+            获取或设置字段名称
+            </summary>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.FieldDefine.Type">
+            <summary>
+            获取或设置字段类型
+            </summary>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.FieldDefine.Size">
+            <summary>
+            获取或设置字段大小
+            </summary>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.FieldDefine.Float">
+            <summary>
+            获取或设置字段精度
+            </summary>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.FieldDefine.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.FieldDefine.GetTypeString(dpz2.db.DatabaseTypes)">
+            <summary>
+            获取对应数据库标准的类型表示方式
+            </summary>
+            <param name="tp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.FieldDefine.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取对象标准的SQL表示形式
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.SqlUnits.Formula">
+            <summary>
+            算式
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.#ctor(dpz2.db.ISqlStringable,System.String,dpz2.db.ISqlStringable)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="left"></param>
+            <param name="opt"></param>
+            <param name="right"></param>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_BitwiseAnd(dpz2.db.SqlUnits.Formula,dpz2.db.ISqlStringable)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_BitwiseOr(dpz2.db.SqlUnits.Formula,dpz2.db.ISqlStringable)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Addition(dpz2.db.SqlUnits.Formula,dpz2.db.ISqlStringable)">
+            <summary>
+            重载+运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Addition(dpz2.db.SqlUnits.Formula,System.Double)">
+            <summary>
+            重载+运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Addition(dpz2.db.SqlUnits.Formula,System.String)">
+            <summary>
+            重载+运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Subtraction(dpz2.db.SqlUnits.Formula,dpz2.db.ISqlStringable)">
+            <summary>
+            重载-运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Subtraction(dpz2.db.SqlUnits.Formula,System.Double)">
+            <summary>
+            重载-运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Subtraction(dpz2.db.SqlUnits.Formula,System.String)">
+            <summary>
+            重载-运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Multiply(dpz2.db.SqlUnits.Formula,dpz2.db.ISqlStringable)">
+            <summary>
+            重载*运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Multiply(dpz2.db.SqlUnits.Formula,System.Double)">
+            <summary>
+            重载*运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Multiply(dpz2.db.SqlUnits.Formula,System.String)">
+            <summary>
+            重载*运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Division(dpz2.db.SqlUnits.Formula,dpz2.db.ISqlStringable)">
+            <summary>
+            重载/运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Division(dpz2.db.SqlUnits.Formula,System.Double)">
+            <summary>
+            重载+运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Division(dpz2.db.SqlUnits.Formula,System.String)">
+            <summary>
+            重载+运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Modulus(dpz2.db.SqlUnits.Formula,dpz2.db.ISqlStringable)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Modulus(dpz2.db.SqlUnits.Formula,System.Double)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Modulus(dpz2.db.SqlUnits.Formula,System.String)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Equality(dpz2.db.SqlUnits.Formula,dpz2.db.ISqlStringable)">
+            <summary>
+            重载==运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Equality(dpz2.db.SqlUnits.Formula,System.Double)">
+            <summary>
+            重载==运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Equality(dpz2.db.SqlUnits.Formula,System.String)">
+            <summary>
+            重载==运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Inequality(dpz2.db.SqlUnits.Formula,dpz2.db.ISqlStringable)">
+            <summary>
+            重载!=运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Inequality(dpz2.db.SqlUnits.Formula,System.Double)">
+            <summary>
+            重载!=运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_Inequality(dpz2.db.SqlUnits.Formula,System.String)">
+            <summary>
+            重载!=运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_GreaterThan(dpz2.db.SqlUnits.Formula,dpz2.db.ISqlStringable)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_GreaterThan(dpz2.db.SqlUnits.Formula,System.Double)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_GreaterThan(dpz2.db.SqlUnits.Formula,System.String)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_LessThan(dpz2.db.SqlUnits.Formula,dpz2.db.ISqlStringable)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_LessThan(dpz2.db.SqlUnits.Formula,System.Double)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_LessThan(dpz2.db.SqlUnits.Formula,System.String)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_GreaterThanOrEqual(dpz2.db.SqlUnits.Formula,dpz2.db.ISqlStringable)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_GreaterThanOrEqual(dpz2.db.SqlUnits.Formula,System.Double)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_GreaterThanOrEqual(dpz2.db.SqlUnits.Formula,System.String)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_LessThanOrEqual(dpz2.db.SqlUnits.Formula,dpz2.db.ISqlStringable)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_LessThanOrEqual(dpz2.db.SqlUnits.Formula,System.Double)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.op_LessThanOrEqual(dpz2.db.SqlUnits.Formula,System.String)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.In(dpz2.db.ISqlStringable)">
+            <summary>
+            IN操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.In(System.Double[])">
+            <summary>
+            IN操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.In(System.String[])">
+            <summary>
+            IN操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.NotIn(dpz2.db.ISqlStringable)">
+            <summary>
+            IN操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.NotIn(System.Double[])">
+            <summary>
+            IN操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.NotIn(System.String[])">
+            <summary>
+            IN操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.Is(System.String)">
+            <summary>
+            IS操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.IsNot(System.String)">
+            <summary>
+            IS NOT操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.Like(System.String)">
+            <summary>
+            LIKE操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.Formula.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Formula.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取标准字段SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.SqlUnits.Functions.Basic">
+            <summary>
+            函数定义基类
+            </summary>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.Functions.Basic.Name">
+            <summary>
+            函数名称
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Functions.Basic.#ctor(System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="T:dpz2.db.SqlUnits.Functions.Count">
+            <summary>
+            统计函数
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Functions.Count.#ctor(dpz2.db.ISqlStringable)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.Functions.Count.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Functions.Count.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Functions.Count.As(System.String)">
+            <summary>
+            重命名
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.SqlUnits.Number">
+            <summary>
+            数字单元
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Number.#ctor(System.Double)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.Number.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Number.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取标准SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.SqlUnits.Numbers">
+            <summary>
+            字符串集合单元
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Numbers.#ctor(System.Double[])">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.Numbers.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Numbers.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取标准SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.SqlUnits.Rand">
+            <summary>
+            随机函数内容
+            </summary>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.Rand.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Rand.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取标准SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.SqlUnits.SelectOrder">
+            <summary>
+            查询语句中的排序信息
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.SelectOrder.#ctor(dpz2.db.ISqlStringable,System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="obj"></param>
+            <param name="sort"></param>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.SelectOrder.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.SelectOrder.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取标准字段SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.SqlUnits.String">
+            <summary>
+            数字单元
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.String.#ctor(System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.String.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.String.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取标准SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.SqlUnits.Strings">
+            <summary>
+            字符串集合单元
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Strings.#ctor(System.String[])">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.Strings.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Strings.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取标准SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.SqlUnits.Table">
+            <summary>
+            表定义
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Table.#ctor(System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Table.OnParseString">
+            <summary>
+            获取字符串表现形式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.Table.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Table.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取标准SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.Table.ToSqlTableString(dpz2.db.DatabaseTypes)">
+            <summary>
+            获取标准字段SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.db.SqlUnits.TableField">
+            <summary>
+            表字段
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.#ctor(dpz2.db.SqlUnits.Table,System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="table"></param>
+            <param name="name"></param>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.#ctor(System.String)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.OnParseString">
+            <summary>
+            获取字符串表现形式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:dpz2.db.SqlUnits.TableField.IsComplicated">
+            <summary>
+            获取是否为复杂对象
+            </summary>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.ToSqlString(dpz2.db.DatabaseTypes,System.Boolean)">
+            <summary>
+            获取标准字段SQL字符串
+            </summary>
+            <param name="tp"></param>
+            <param name="multiTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Addition(dpz2.db.SqlUnits.TableField,dpz2.db.ISqlStringable)">
+            <summary>
+            重载+运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Addition(dpz2.db.SqlUnits.TableField,System.Double)">
+            <summary>
+            重载+运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Addition(dpz2.db.SqlUnits.TableField,System.String)">
+            <summary>
+            重载+运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Subtraction(dpz2.db.SqlUnits.TableField,dpz2.db.ISqlStringable)">
+            <summary>
+            重载-运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Subtraction(dpz2.db.SqlUnits.TableField,System.Double)">
+            <summary>
+            重载-运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Subtraction(dpz2.db.SqlUnits.TableField,System.String)">
+            <summary>
+            重载-运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Multiply(dpz2.db.SqlUnits.TableField,dpz2.db.ISqlStringable)">
+            <summary>
+            重载*运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Multiply(dpz2.db.SqlUnits.TableField,System.Double)">
+            <summary>
+            重载*运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Multiply(dpz2.db.SqlUnits.TableField,System.String)">
+            <summary>
+            重载*运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Division(dpz2.db.SqlUnits.TableField,dpz2.db.ISqlStringable)">
+            <summary>
+            重载/运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Division(dpz2.db.SqlUnits.TableField,System.Double)">
+            <summary>
+            重载+运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Division(dpz2.db.SqlUnits.TableField,System.String)">
+            <summary>
+            重载+运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Modulus(dpz2.db.SqlUnits.TableField,dpz2.db.ISqlStringable)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Modulus(dpz2.db.SqlUnits.TableField,System.Double)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Modulus(dpz2.db.SqlUnits.TableField,System.String)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Equality(dpz2.db.SqlUnits.TableField,dpz2.db.ISqlStringable)">
+            <summary>
+            重载==运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Equality(dpz2.db.SqlUnits.TableField,System.Double)">
+            <summary>
+            重载==运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Equality(dpz2.db.SqlUnits.TableField,System.String)">
+            <summary>
+            重载==运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Inequality(dpz2.db.SqlUnits.TableField,dpz2.db.ISqlStringable)">
+            <summary>
+            重载!=运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Inequality(dpz2.db.SqlUnits.TableField,System.Double)">
+            <summary>
+            重载!=运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_Inequality(dpz2.db.SqlUnits.TableField,System.String)">
+            <summary>
+            重载!=运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_GreaterThan(dpz2.db.SqlUnits.TableField,dpz2.db.ISqlStringable)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_GreaterThan(dpz2.db.SqlUnits.TableField,System.Double)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_GreaterThan(dpz2.db.SqlUnits.TableField,System.String)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_LessThan(dpz2.db.SqlUnits.TableField,dpz2.db.ISqlStringable)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_LessThan(dpz2.db.SqlUnits.TableField,System.Double)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_LessThan(dpz2.db.SqlUnits.TableField,System.String)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_GreaterThanOrEqual(dpz2.db.SqlUnits.TableField,dpz2.db.ISqlStringable)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_GreaterThanOrEqual(dpz2.db.SqlUnits.TableField,System.Double)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_GreaterThanOrEqual(dpz2.db.SqlUnits.TableField,System.String)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_LessThanOrEqual(dpz2.db.SqlUnits.TableField,dpz2.db.ISqlStringable)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_LessThanOrEqual(dpz2.db.SqlUnits.TableField,System.Double)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.op_LessThanOrEqual(dpz2.db.SqlUnits.TableField,System.String)">
+            <summary>
+            重载运算符
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>        
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.In(dpz2.db.ISqlStringable)">
+            <summary>
+            IN操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.In(System.Double[])">
+            <summary>
+            IN操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.In(System.String[])">
+            <summary>
+            IN操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.NotIn(dpz2.db.ISqlStringable)">
+            <summary>
+            IN操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.NotIn(System.Double[])">
+            <summary>
+            IN操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.NotIn(System.String[])">
+            <summary>
+            IN操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.Is(System.String)">
+            <summary>
+            IS操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.IsNot(System.String)">
+            <summary>
+            IS NOT操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.Like(System.String)">
+            <summary>
+            LIKE操作
+            </summary>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.As(System.String)">
+            <summary>
+            重命名
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.db.SqlUnits.TableField.OnDispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dpz2.db", "dpz2.db.csproj", "{718AB2C2-89B8-41BD-8E9C-9F575230E947}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo", "Demo\Demo.csproj", "{16168D6C-DF3D-4E57-A1DB-5F854FCB5A8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{718AB2C2-89B8-41BD-8E9C-9F575230E947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{718AB2C2-89B8-41BD-8E9C-9F575230E947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{718AB2C2-89B8-41BD-8E9C-9F575230E947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{718AB2C2-89B8-41BD-8E9C-9F575230E947}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16168D6C-DF3D-4E57-A1DB-5F854FCB5A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16168D6C-DF3D-4E57-A1DB-5F854FCB5A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16168D6C-DF3D-4E57-A1DB-5F854FCB5A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16168D6C-DF3D-4E57-A1DB-5F854FCB5A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {879B3A5A-3A97-4DB5-9EF6-F4793096059F}
+	EndGlobalSection
+EndGlobal

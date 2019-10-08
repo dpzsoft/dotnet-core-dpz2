@@ -1,0 +1,604 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dpz2.Json</name>
+    </assembly>
+    <members>
+        <member name="T:dpz2.Json.JsonArray">
+            <summary>
+            数组单元
+            </summary>
+        </member>
+        <member name="M:dpz2.Json.JsonArray.#ctor(dpz2.Json.JsonUnit)">
+            <summary>
+            对象实例化
+            </summary>
+        </member>
+        <member name="M:dpz2.Json.JsonArray.OnGetArrayItem(System.Int32)">
+            <summary>
+            获取索引对象
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonArray.OnSetArrayItem(System.Int32,dpz2.Json.JsonUnit)">
+            <summary>
+            设置索引对象
+            </summary>
+            <param name="index"></param>
+            <param name="unit"></param>
+        </member>
+        <member name="M:dpz2.Json.JsonArray.OnGetJsonString">
+            <summary>
+            获取Json字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonArray.OnGetItemCount">
+            <summary>
+            获取索引对象数量集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonArray.OnDispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:dpz2.Json.JsonBoolean">
+            <summary>
+            布尔单元类型
+            </summary>
+        </member>
+        <member name="P:dpz2.Json.JsonBoolean.Value">
+            <summary>
+            获取或设置值
+            </summary>
+        </member>
+        <member name="M:dpz2.Json.JsonBoolean.#ctor(dpz2.Json.JsonUnit)">
+            <summary>
+            对象实例化
+            </summary>
+        </member>
+        <member name="M:dpz2.Json.JsonBoolean.OnGetBoolean">
+            <summary>
+            获取数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonBoolean.OnGetString">
+            <summary>
+            获取字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonBoolean.OnSetBoolean(System.Boolean)">
+            <summary>
+            设置数值
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:dpz2.Json.JsonBoolean.OnGetJsonString">
+            <summary>
+            获取Json字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.Json.JsonNumber">
+            <summary>
+            数值单元类型
+            </summary>
+        </member>
+        <member name="P:dpz2.Json.JsonNumber.Value">
+            <summary>
+            获取或设置值
+            </summary>
+        </member>
+        <member name="M:dpz2.Json.JsonNumber.#ctor(dpz2.Json.JsonUnit)">
+            <summary>
+            对象实例化
+            </summary>
+        </member>
+        <member name="M:dpz2.Json.JsonNumber.OnGetNumber">
+            <summary>
+            获取数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonNumber.OnGetString">
+            <summary>
+            获取字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonNumber.OnSetNumber(System.Double)">
+            <summary>
+            设置数值
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:dpz2.Json.JsonNumber.OnGetJsonString">
+            <summary>
+            获取Json字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.Json.JsonObject">
+            <summary>
+            对象单元
+            </summary>
+        </member>
+        <member name="M:dpz2.Json.JsonObject.#ctor(dpz2.Json.JsonUnit)">
+            <summary>
+            对象实例化
+            </summary>
+        </member>
+        <member name="M:dpz2.Json.JsonObject.OnGetKeys">
+            <summary>
+            获取子对象键值集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonObject.OnGetChildItem(System.String)">
+            <summary>
+            获取子对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonObject.OnSetChildItem(System.String,dpz2.Json.JsonUnit)">
+            <summary>
+            设置子对象
+            </summary>
+            <param name="key"></param>
+            <param name="unit"></param>
+        </member>
+        <member name="M:dpz2.Json.JsonObject.OnGetJsonString">
+            <summary>
+            获取Json字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonObject.OnDispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:dpz2.Json.JsonString">
+            <summary>
+            字符串单元
+            </summary>
+        </member>
+        <member name="P:dpz2.Json.JsonString.Value">
+            <summary>
+            获取或设置值
+            </summary>
+        </member>
+        <member name="M:dpz2.Json.JsonString.#ctor(dpz2.Json.JsonUnit)">
+            <summary>
+            对象实例化
+            </summary>
+        </member>
+        <member name="M:dpz2.Json.JsonString.String2Unicode(System.String)">
+            <summary>  
+            字符串转Unicode
+            </summary>
+            <param name="source">源字符串</param>
+            <returns>Unicode编码后的字符串</returns>
+        </member>
+        <member name="M:dpz2.Json.JsonString.StringToUnicode(System.String)">
+            <summary>  
+            字符串转为UniCode码字符串  
+            </summary>  
+            <param name="s"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:dpz2.Json.JsonString.UnicodeToString(System.String)">
+            <summary>  
+            Unicode字符串转为正常字符串  
+            </summary>  
+            <param name="srcText"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:dpz2.Json.JsonString.OnGetString">
+            <summary>
+            获取字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonString.OnGetNumber">
+            <summary>
+            获取数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonString.OnSetNumber(System.Double)">
+            <summary>
+            设置数值
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:dpz2.Json.JsonString.OnSetString(System.String)">
+            <summary>
+            设置字符串
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:dpz2.Json.JsonString.GetJsonString(System.String)">
+            <summary>
+            获取标准化的Json字符串
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonString.OnGetJsonString">
+            <summary>
+            获取Json字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonString.OnDispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:dpz2.Json.UnitType">
+            <summary>
+            单元类型
+            </summary>
+        </member>
+        <member name="F:dpz2.Json.UnitType.Number">
+            <summary>
+            数值类型
+            </summary>
+        </member>
+        <member name="F:dpz2.Json.UnitType.String">
+            <summary>
+            字符串类型
+            </summary>
+        </member>
+        <member name="F:dpz2.Json.UnitType.Object">
+            <summary>
+            对象类型
+            </summary>
+        </member>
+        <member name="F:dpz2.Json.UnitType.Array">
+            <summary>
+            数组类型
+            </summary>
+        </member>
+        <member name="T:dpz2.Json.JsonUnit">
+            <summary>
+            Json存储单元
+            </summary>
+        </member>
+        <member name="P:dpz2.Json.JsonUnit.UnitType">
+            <summary>
+            获取单元类型
+            </summary>
+        </member>
+        <member name="P:dpz2.Json.JsonUnit.Parent">
+            <summary>
+            获取父对象
+            </summary>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.#ctor(dpz2.Json.UnitType,dpz2.Json.JsonUnit)">
+            <summary>
+            对象实例化
+            </summary>
+            <param name="type"></param>
+            <param name="parent"></param>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.OnGetNumber">
+            <summary>
+            获取数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.GetNumber">
+            <summary>
+            获取数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.OnSetNumber(System.Double)">
+            <summary>
+            设置数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.SetValue(System.Double)">
+            <summary>
+            设置数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.OnGetBoolean">
+            <summary>
+            获取数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.GetBoolean">
+            <summary>
+            获取数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.OnSetBoolean(System.Boolean)">
+            <summary>
+            设置数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.SetBoolean(System.Boolean)">
+            <summary>
+            设置数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.OnGetString">
+            <summary>
+            获取字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.GetString">
+            <summary>
+            获取数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.OnSetString(System.String)">
+            <summary>
+            设置数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.SetValue(System.String)">
+            <summary>
+            设置数值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.OnGetJsonString">
+            <summary>
+            获取Json标准字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.ToJsonString">
+            <summary>
+            获取Json标准字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.OnGetArrayItem(System.Int32)">
+            <summary>
+            获取索引对象
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.OnSetArrayItem(System.Int32,dpz2.Json.JsonUnit)">
+            <summary>
+            设置索引对象
+            </summary>
+            <param name="index"></param>
+            <param name="unit"></param>
+            <returns></returns>
+        </member>
+        <member name="P:dpz2.Json.JsonUnit.Item(System.Int32)">
+            <summary>
+            获取或设置数组对象
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.OnGetChildItem(System.String)">
+            <summary>
+            获取子对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.OnSetChildItem(System.String,dpz2.Json.JsonUnit)">
+            <summary>
+            设置子对象
+            </summary>
+            <param name="key"></param>
+            <param name="unit"></param>
+            <returns></returns>
+        </member>
+        <member name="P:dpz2.Json.JsonUnit.Item(System.String)">
+            <summary>
+            获取或设置子对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.OnGetKeys">
+            <summary>
+            获取子对象键值集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:dpz2.Json.JsonUnit.Keys">
+            <summary>
+            获取子对象键值集合
+            </summary>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.OnGetItemCount">
+            <summary>
+            获取索引对象数量集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:dpz2.Json.JsonUnit.Count">
+            <summary>
+            获取索引对象数量集合
+            </summary>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.Object(System.String)">
+            <summary>
+            获取一个对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.Object(System.Int32)">
+            <summary>
+            获取一个对象
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.Array(System.String)">
+            <summary>
+            获取一个数组
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.Array(System.Int32)">
+            <summary>
+            获取一个数组
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.String(System.String)">
+            <summary>
+            获取一个字符串
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.String(System.Int32)">
+            <summary>
+            获取一个字符串
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.Bool(System.String)">
+            <summary>
+            获取一个字符串
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.Bool(System.Int32)">
+            <summary>
+            获取一个字符串
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.Number(System.String)">
+            <summary>
+            获取一个数值
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.Number(System.Int32)">
+            <summary>
+            获取一个数值
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.JsonUnit.OnParseString">
+            <summary>
+            获取Json字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dpz2.Json.Jttp">
+            <summary>
+            一种基于Json进行的通讯协议
+            </summary>
+        </member>
+        <member name="P:dpz2.Json.Jttp.Header">
+            <summary>
+            头部信息
+            </summary>
+        </member>
+        <member name="T:dpz2.Json.JttpHeader">
+            <summary>
+            Jttp协议专用头部
+            </summary>
+        </member>
+        <member name="P:dpz2.Json.JttpHeader.Ver">
+            <summary>
+            获取或设置协议版本
+            </summary>
+        </member>
+        <member name="P:dpz2.Json.JttpHeader.Type">
+            <summary>
+            获取或设置协议类型
+            </summary>
+        </member>
+        <member name="P:dpz2.Json.JttpHeader.SessionID">
+            <summary>
+            获取或设置交互识标
+            </summary>
+        </member>
+        <member name="P:dpz2.Json.JttpHeader.Time">
+            <summary>
+            获取或设置时间戳
+            </summary>
+        </member>
+        <member name="P:dpz2.Json.JttpHeader.Status">
+            <summary>
+            获取或设置通讯状态
+            </summary>
+        </member>
+        <member name="P:dpz2.Json.JttpHeader.Error">
+            <summary>
+            获取或设置错误代码
+            </summary>
+        </member>
+        <member name="T:dpz2.Json.Parser">
+            <summary>
+            Json解析器
+            </summary>
+        </member>
+        <member name="F:dpz2.Json.Parser.EnforceUnicode">
+            <summary>
+            是否强制使用Unicode进行非Ascii字符编码
+            </summary>
+        </member>
+        <member name="M:dpz2.Json.Parser.ParseJson(System.String)">
+            <summary>
+            获取对象
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.Parser.GetObject(dpz2.Json.JsonUnit,System.Type)">
+            <summary>
+            将Json对象覆盖到标准对象
+            </summary>
+            <param name="unit"></param>
+            <param name="tp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.Parser.SerializeObject(System.Object)">
+            <summary>
+            将对象进行Json序列化
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dpz2.Json.Parser.DeserializeObject(System.String,System.Type)">
+            <summary>
+            将Json字符串反序列化并按类型返回对象
+            </summary>
+            <param name="json"></param>
+            <param name="tp"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

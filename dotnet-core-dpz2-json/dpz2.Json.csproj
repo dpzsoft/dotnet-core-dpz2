@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <PackageId>dotnet-core-dpz2-json</PackageId>
+    <Version>1.0.1908.2</Version>
+    <Authors>d.p.z software studio</Authors>
+    <Description>基于dpz2开发套件的Json应用扩展(.Net Core)，包括一套自行研发的json解析算法及相关的扩展操作</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIconUrl>https://dev.lywos.com/Img/dpz/logo.jpg</PackageIconUrl>
+    <RepositoryUrl>https://github.com/dpzsoft/dotnet-core-dpz2-json</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>X:\Projects\dpzsoft\dotnet-core-dpz2\dotnet-core-dpz2-json\dpz2.Json.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="demo\**" />
+    <EmbeddedResource Remove="demo\**" />
+    <None Remove="demo\**" />
+    <None Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dotnet-core-dpz2" Version="1.1.1908.4" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <PackageId>dotnet-core-dpz2-xorm</PackageId>
+    <Version>1.1.1909.3</Version>
+    <Description>基于dpz2开发套件及dpz2.xml扩展组件二次扩展的XML定义式对象关系映射(XOrm)组件(.Net Core)</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIconUrl>https://dev.lywos.com/Img/dpz/logo.jpg</PackageIconUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="demo\**" />
+    <Compile Remove="xcc\**" />
+    <EmbeddedResource Remove="demo\**" />
+    <EmbeddedResource Remove="xcc\**" />
+    <None Remove="demo\**" />
+    <None Remove="xcc\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dotnet-core-dpz2" Version="1.2.1909.6" />
+    <PackageReference Include="dotnet-core-dpz2-file" Version="1.0.1907.1" />
+    <PackageReference Include="dotnet-core-dpz2-net" Version="1.0.1907.2" />
+    <PackageReference Include="dotnet-core-dpz2-xml" Version="1.1.1908.3" />
+  </ItemGroup>
+
+</Project>
