@@ -29,7 +29,7 @@
     <PackageReference Include="dotnet-core-dpz2-net" Version="1.0.1907.2" />
     <PackageReference Include="dotnet-core-dpz2-xml" Version="1.2.1909.6" />
     <PackageReference Include="dotnet-core-dpz2-xorm" Version="1.0.1908.1" />
-    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.6" />
   </ItemGroup>
 
   <ItemGroup>
